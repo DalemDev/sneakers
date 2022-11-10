@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contenedor {
+  width: 100vw;
+  height: 100vh;
+  transition: filter 1s ease;
+}
+
+.navbar {
+  width: 50%;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transform: translateX(-1000px);
+  transition: transform 1s ease;
+  z-index: 10;
+}
+
+.link {
+  padding: 20px 0 0 30px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px 0;
+}
+
+.user img {
+  width: 30px;
+  height: 30px;
+}
+
+.hamburguer {
+  display: flex;
+  align-items: center;
+}
+
+.conjunto-uno,
+.conjunto-dos {
+  display: flex;
+  gap: 15px;
+  padding: 0 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.lista {
+  width: 20px;
+  height: 15px;
+  padding: 10px;
+  position: fixed;
+  right: 58px;
+  top: 13px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(26, 100%, 55%);
+  color: hsl(0, 0%, 100%);
+  transform: scale(0);
+  transition: transform 1s ease;
+}
+
+.galeria {
+  width: 100%;
+}
+
+.producto {
+  width: 100%;
+  height: 300px;
+}
+
+.anterior-img,
+.siguiente-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.anterior-img {
+  position: fixed;
+  top: 170px;
+  left: 10px;
+}
+
+.siguiente-img {
+  position: fixed;
+  top: 171px;
+  right: 10px;
+}
+
+.main {
+  padding: 10px 20px;
+}
+
+.company {
+  display: block;
+  color: hsl(26, 100%, 55%);
+  margin-bottom: 5px;
+}
+
+.nombre-producto {
+  font-size: 31px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: hsl(0, 0%, 0%);
+}
+
+.texto-producto {
+  line-height: 25px;
+  color: hsl(219, 9%, 45%);
+  margin-bottom: 10px;
+}
+
+.total {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.conjunto-tres {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.total-pagar {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.descuento {
+  display: flex;
+  padding: 5px 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(25, 100%, 94%);
+  color: hsl(26, 100%, 55%);
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.sin-descuento {
+  text-decoration: line-through;
+  color: hsl(220, 14%, 75%);
+}
+
+.contenedor-agregar {
+  width: 100%;
+  padding: 20px 10px;
+  border-radius: 10px;
+  background: hsl(223, 64%, 98%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.quitar,
+.cantidad-llevar,
+.agregar {
+  font-size: 20px;
+}
+
+.quitar {
+  padding: 0 0 0 10px;
+}
+
+.cantidad-llevar {
+  font-weight: bold;
+}
+
+.agregar {
+  padding: 0 10px 0 0;
+}
+
+.agregar-carro {
+  width: 100%;
+  display: flex;
+  padding: 20px 0;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(26, 100%, 55%);
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  gap: 10px;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 900px) {
+  .contenedor{
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .close,
+  .hamburguer {
+    display: none;
+  }
+  .navbar {
+    width: auto;
+    background: none;
+    position: static;   
+    flex-direction: row;
+    gap: 30px;
+    transform: translateX(0);
+    transition: transform 1s ease;
+  }
+  .header{
+    border-bottom: 2px solid hsl(220, 14%, 75%);
+  }
+  .link{
+    padding: 0;
+  }
+  .contenedor-info{
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+  }
+  .anterior-img{
+    top: 440px;
+    left: 220px;
+  }
+  .siguiente-img{
+    top: 440px;
+    right: 702px;
+  } 
+  .main{
+    padding: 10px 40px 30px 40px;
+  }
+  .lista{
+    right: 203px;
+  }
+}
